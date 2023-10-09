@@ -39,17 +39,13 @@ class Song(var title: String, val artist: String, var duration: Int) {
     }
 
     //Copy with New Duration:
-
     fun copyWithNewDuration(newDur: Int): Song {
         return Song(title, artist, newDur)
     }
 
     //Generate Random Song:
     companion object {
-
-        fun copyWithNewDuration(newDur: Int): Song {
-            return Song(Song.title, artist, newDur)
-        }
+        
         fun generateRandomSong(): Song {
             val artists = listOf("A1", "A2", "A3")
             val titles = listOf("T1", "T2", "T3")
