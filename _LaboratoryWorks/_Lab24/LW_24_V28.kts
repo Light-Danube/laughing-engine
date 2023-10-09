@@ -1,5 +1,3 @@
-
-
 class Song(var title: String, val artist: String, var duration: Int) {
     //Method for formated song duration:
     fun getFormattedDuration(): String {
@@ -18,6 +16,7 @@ class Song(var title: String, val artist: String, var duration: Int) {
     fun printSong() {
         println("Song: $title by $artist")
         println("Duration: ${getFormattedDuration()}")
+        println("\n")
     }
 
     //Get Info Method:
@@ -45,7 +44,6 @@ class Song(var title: String, val artist: String, var duration: Int) {
 
     //Generate Random Song:
     companion object {
-        
         fun generateRandomSong(): Song {
             val artists = listOf("A1", "A2", "A3")
             val titles = listOf("T1", "T2", "T3")
@@ -56,7 +54,23 @@ class Song(var title: String, val artist: String, var duration: Int) {
 
             return Song(randomTitle, randomArtist, randomDuration)
         }
+
+        fun createSongList(vararg songs: Song):List<Song> {
+            return songs.toList()
+        }
     }
+
+    // LIST METHODS:
+    fun shufflePlaylist(playlist: List<Song>): List<Song> {
+        return playlist.shuffled()
+    }
+
+    // Method to filter songs in a playlist by minimum duration
+    fun filterByDuration(playlist: List<Song>, minDuration: Int): List<Song> {
+        return playlist.filter { it.duration >= minDuration }
+    }
+
+
 
 }
 
@@ -86,6 +100,19 @@ fun main() {
 
     val randSong = Song.generateRandomSong()
     randSong.printSong()
+
+    val playlist = Song.createSongList(s1, s2, newSong, randSong)
+    println("\nPlaylist:")
+    playlist.forEach{it.printSong()}
+
+    val shufflePlayList = s1.shufflePlaylist(playlist)
+    println("\nPlaylist:")
+    shufflePlayList.forEach{it.printSong()}
+
+
+    val filteredPlayList = s1.filterByDuration(playlist, 200)
+    println("\nPlaylist:")
+    filteredPlayList.forEach{it.printSong()}
 }
 
 main()
