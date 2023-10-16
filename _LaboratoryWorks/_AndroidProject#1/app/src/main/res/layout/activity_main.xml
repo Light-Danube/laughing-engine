@@ -6,51 +6,52 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- Cat #1 -->
-
-    <!-- Cat #2 -->
-    <LinearLayout
-        android:id="@+id/catOneLayout"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="start"
-        android:orientation="horizontal">
+        android:text="@string/app_name" />
+
+    <!-- Animal 1 -->
+    <RelativeLayout
+        android:id="@+id/animal1Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/catOneImage"
-            android:layout_width="74dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:clickable="false"
-            android:contentDescription="@string/app_name"
-            tools:src="@tools:sample/avatars" />
+            android:id="@+id/animal1Image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/animal1_image"/>
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/catOneName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Name" />
-
-            <TextView
-                android:id="@+id/catOneDescription"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/catOneButton"
+        <TextView
+            android:id="@+id/animal1Name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Details" />
+            android:text="Animal 1 Name"
+            android:layout_alignTop="@id/animal1Image"
+            android:layout_toEndOf="@id/animal1Image"
+            android:layout_marginStart="16dp"/>
 
-    </LinearLayout>
+        <Button
+            android:id="@+id/animal1Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Details"
+            android:layout_alignTop="@id/animal1Image"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="16dp"/>
+
+        <TextView
+            android:id="@+id/animal1Description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Animal 1 Description"
+            android:layout_below="@id/animal1Name"
+            android:layout_toEndOf="@id/animal1Image"
+            android:layout_marginStart="16dp"/>
+    </RelativeLayout>
+
 
     <LinearLayout
         android:id="@+id/catTwoLayout"
