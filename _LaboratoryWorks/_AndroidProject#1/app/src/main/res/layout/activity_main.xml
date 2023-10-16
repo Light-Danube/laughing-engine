@@ -4,4 +4,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- Cat #1 -->
+    <LinearLayout
+        android:id="@+id/catOneLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    </LinearLayout>
+
+    <!-- Cat #2 -->
+    <LinearLayout
+        android:id="@+id/catTwoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    </LinearLayout>
+    <!-- Cat #3 -->
+    <LinearLayout
+        android:id="@+id/catThreeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    </LinearLayout>
+
+
 </LinearLayout>
