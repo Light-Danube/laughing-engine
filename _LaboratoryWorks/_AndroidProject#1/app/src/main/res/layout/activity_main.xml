@@ -1,70 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
 
     <TextView
-        android:id="@+id/appName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/app_name" />
-
-    <!-- Animal 1 -->
-    <RelativeLayout
-        android:id="@+id/animal1Layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:id="@+id/animal1Image"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/animal1_image"/>
-
-        <TextView
-            android:id="@+id/animal1Name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Animal 1 Name"
-            android:layout_alignTop="@id/animal1Image"
-            android:layout_toEndOf="@id/animal1Image"
-            android:layout_marginStart="16dp"/>
-
-        <Button
-            android:id="@+id/animal1Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Details"
-            android:layout_alignTop="@id/animal1Image"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="16dp"/>
-
-        <TextView
-            android:id="@+id/animal1Description"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Animal 1 Description"
-            android:layout_below="@id/animal1Name"
-            android:layout_toEndOf="@id/animal1Image"
-            android:layout_marginStart="16dp"/>
-    </RelativeLayout>
-
-
-    <LinearLayout
-        android:id="@+id/catTwoLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-    </LinearLayout>
-    <!-- Cat #3 -->
-    <LinearLayout
-        android:id="@+id/catThreeLayout"
+        android:text="Hello My Animal App"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:background="#800080"/>
+
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-    </LinearLayout>
+        android:layout_margin="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:padding="8dp"
+                android:src="@drawable/ic_launcher_foreground" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Cat name"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:gravity="center_vertical"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DETAILS"
+                android:textColor="#FFFFFF"
+                android:background="#800080"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Repeat the same structure for the other two sections -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:padding="8dp"
+                android:src="@drawable/ic_launcher_foreground" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Cat name"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:gravity="center_vertical"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DETAILS"
+                android:textColor="#FFFFFF"
+                android:background="#800080"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:padding="8dp"
+                android:src="@drawable/ic_launcher_foreground" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Cat name"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:gravity="center_vertical"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DETAILS"
+                android:textColor="#FFFFFF"
+                android:background="#800080"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
 </LinearLayout>
