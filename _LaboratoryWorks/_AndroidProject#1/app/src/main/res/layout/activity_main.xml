@@ -28,61 +28,30 @@
             android:orientation="horizontal">
 
             <ImageView
+                android:id="@+id/animalImg1"
                 android:layout_width="64dp"
                 android:layout_height="64dp"
                 android:padding="8dp"
                 android:src="@drawable/ic_launcher_foreground" />
 
             <TextView
+                android:id="@+id/animalName1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:gravity="center_vertical"
                 android:text="Cat name"
                 android:textColor="#000000"
-                android:textSize="18sp"
-                android:gravity="center_vertical"/>
+                android:textSize="18sp" />
 
             <Button
+                android:id="@+id/animalDetails1"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#800080"
+                android:clickable="true"
                 android:text="DETAILS"
-                android:textColor="#FFFFFF"
-                android:background="#800080"/>
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
-
-    <!-- Repeat the same structure for the other two sections -->
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="64dp"
-                android:layout_height="64dp"
-                android:padding="8dp"
-                android:src="@drawable/ic_launcher_foreground" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Cat name"
-                android:textColor="#000000"
-                android:textSize="18sp"
-                android:gravity="center_vertical"/>
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="DETAILS"
-                android:textColor="#FFFFFF"
-                android:background="#800080"/>
+                android:textColor="#FFFFFF"/>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
@@ -97,26 +66,68 @@
             android:orientation="horizontal">
 
             <ImageView
+                android:id="@+id/animaImg2"
                 android:layout_width="64dp"
                 android:layout_height="64dp"
                 android:padding="8dp"
                 android:src="@drawable/ic_launcher_foreground" />
 
             <TextView
+                android:id="@+id/animalName2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:gravity="center_vertical"
                 android:text="Cat name"
                 android:textColor="#000000"
-                android:textSize="18sp"
-                android:gravity="center_vertical"/>
+                android:textSize="18sp" />
 
             <Button
+                android:id="@+id/animalDetails2"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#800080"
                 android:text="DETAILS"
                 android:textColor="#FFFFFF"
-                android:background="#800080"/>
+                android:clickable="true"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/animalImg3"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:padding="8dp"
+                android:src="@drawable/ic_launcher_foreground" />
+
+            <TextView
+                android:id="@+id/animalName3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="Cat name"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/animalDetails3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#800080"
+                android:text="DETAILS"
+                android:textColor="#FFFFFF"
+                android:clickable="true"/>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
