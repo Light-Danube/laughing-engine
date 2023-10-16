@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -9,7 +11,37 @@
         android:id="@+id/catOneLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:gravity="start">
+
+        <ImageView
+            android:id="@+id/catOneImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:clickable="false"
+            android:contentDescription="@string/app_name"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/catOneName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Name" />
+
+        <TextView
+            android:id="@+id/catOneDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+
+        <Button
+            android:id="@+id/catOneButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right|center_horizontal|center_vertical|end"
+            android:text="Details" />
+
     </LinearLayout>
 
     <!-- Cat #2 -->
@@ -26,6 +58,4 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
     </LinearLayout>
-
-
 </LinearLayout>
