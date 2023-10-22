@@ -2,7 +2,6 @@ package com.example.hellokittyapp
 
 import android.os.Bundle
 import android.util.Log
-import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
@@ -19,12 +18,12 @@ class MainActivity : AppCompatActivity() {
             setContentView(R.layout.activity_main)
         }
 
-        val detailsButton = findViewById<Button>(R.id.animalDetails1)
+        /*val detailsButton = findViewById<Button>(R.id.animalDetails1)
 
         detailsButton.setOnClickListener {
             // Define what happens when the button is clicked.
             // For example, start a new activity.
             println("Test")
-        }
+        }*/
     }
 }
