@@ -43,6 +43,7 @@
         android:layout_marginStart="144dp"
         android:layout_marginTop="496dp"
         android:text="Return"
+        android:onClick="onButtonClick"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
