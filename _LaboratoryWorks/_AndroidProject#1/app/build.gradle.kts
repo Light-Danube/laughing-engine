@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    kotlin("kapt") version "1.9.10"
 }
 
 
@@ -40,6 +41,8 @@ android {
     }
     buildFeatures {
         compose = true
+        dataBinding=true
+        viewBinding=true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.4.3"

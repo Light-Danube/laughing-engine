@@ -3,6 +3,8 @@ package com.example.hellokittyapp
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import android.view.View
+
 import com.example.hellokittyapp.ui.theme.HelloKittyAppTheme
 
 class MainActivity : AppCompatActivity() {
