@@ -8,15 +8,6 @@
     android:orientation="vertical"
     android:background="#FFFFFF">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Hello My Animal App"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        android:gravity="center"
-        android:background="#800080"/>
-
     <androidx.cardview.widget.CardView
         android:id="@+id/animalView1"
         android:layout_width="match_parent"
