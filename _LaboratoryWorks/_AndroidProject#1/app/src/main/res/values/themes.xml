@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.HelloKittyApp" parent="Theme.AppCompat.Light" />
+    <style name="Theme.HelloKittyApp" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">#800080</item>
+        <item name="colorPrimaryDark">#400040</item>
+        <item name="colorAccent">#00FF00</item>
+    </style>
 </resources>

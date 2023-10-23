@@ -11,11 +11,5 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val detailsButton = findViewById<Button>(R.id.animalDetails1)
-
-        detailsButton.setOnClickListener {
-            // Define what happens when the button is clicked.
-            // For example, start a new activity.
-            println("Test")
-        }
     }
 }
