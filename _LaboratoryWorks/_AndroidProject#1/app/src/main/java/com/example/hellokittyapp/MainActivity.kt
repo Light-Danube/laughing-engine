@@ -1,15 +1,10 @@
 package com.example.hellokittyapp
 
-import android.app.Dialog
 import android.os.Bundle
 import android.content.Intent
-import android.view.MenuItem
-import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.Button
-import android.widget.TextView
-import androidx.appcompat.widget.PopupMenu
-import androidx.appcompat.widget.Toolbar
+
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
