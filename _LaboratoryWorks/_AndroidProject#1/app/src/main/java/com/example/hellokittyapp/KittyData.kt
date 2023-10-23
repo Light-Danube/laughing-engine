@@ -18,7 +18,7 @@ class KittyData : AppCompatActivity() {
         val animalName = findViewById<TextView>(R.id.catDataName)
         val animalDescription = findViewById<TextView>(R.id.catDataDesc)
 
-        val animal = intent.getParcelableExtra<Animal>("animal")
+        val animal = intent.getParcelableExtra<Animal>("Animal")
 
         // Check if the data is not null
         if (animal != null) {
