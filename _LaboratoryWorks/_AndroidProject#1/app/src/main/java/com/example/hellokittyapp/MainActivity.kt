@@ -16,9 +16,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val toolbar = findViewById<Toolbar>(R.id.toolbar)
-        setSupportActionBar(toolbar)
-
         val detailsButton1 = findViewById<Button>(R.id.animalDetails1)
         val detailsButton2 = findViewById<Button>(R.id.animalDetails2)
         val detailsButton3 = findViewById<Button>(R.id.animalDetails3)
@@ -46,54 +43,5 @@ class MainActivity : AppCompatActivity() {
         intent.putExtra("Animal", data)
         startActivity(intent)
     }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            R.id.action_about_creator -> {
-                showAboutCreatorPopup()
-                return true
-            }
-            else -> return super.onOptionsItemSelected(item)
-        }
-    }
-
-    private fun showAboutCreatorPopup() {
-        val popupMenu = PopupMenu(this, findViewById(R.id.toolbar))
-        popupMenu.menuInflater.inflate(R.menu.menu_main, popupMenu.menu)
-
-        val aboutCreatorItem = popupMenu.menu.findItem(R.id.action_about_creator)
-        aboutCreatorItem.setOnMenuItemClickListener {
-            /// Create a custom dialog
-            val dialog = Dialog(this)
-            dialog.setContentView(R.layout.about_creator_dialog)
-
-            // Customize the dialog's appearance (optional)
-            dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
-            dialog.window?.setLayout(
-                WindowManager.LayoutParams.MATCH_PARENT,
-                WindowManager.LayoutParams.WRAP_CONTENT
-            )
-
-            // Find and customize elements in the dialog layout
-            val creatorName = dialog.findViewById<TextView>(R.id.creatorName)
-            val creatorDescription = dialog.findViewById<TextView>(R.id.creatorDescription)
-
-            creatorName.text = "John Doe" // Replace with the creator's name
-            creatorDescription.text = "A passionate app developer and tech enthusiast."
-
-            // Handle the close button click
-            val closeButton = dialog.findViewById<Button>(R.id.closeButton)
-            closeButton.setOnClickListener {
-                dialog.dismiss() // Close the dialog
-            }
-
-            dialog.show() // Show the dialog
-
-            true
-        }
-
-        popupMenu.show()
-    }
-
 
 }

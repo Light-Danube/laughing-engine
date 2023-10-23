@@ -8,13 +8,6 @@
     android:orientation="vertical"
     android:background="#FFFFFF">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        app:popupTheme="@style/Theme.HelloKittyApp.PopupOverlay" />
-
     <androidx.cardview.widget.CardView
         android:id="@+id/animalView1"
         android:layout_width="match_parent"
