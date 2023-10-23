@@ -24,7 +24,8 @@
                 android:layout_width="64dp"
                 android:layout_height="64dp"
                 android:padding="8dp"
-                android:src="@drawable/ic_launcher_foreground" />
+                android:src="@drawable/ic_launcher_foreground"
+                app:srcCompat="@drawable/catimage1" />
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -36,7 +37,7 @@
                     android:id="@+id/animalName1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Cat name"
+                    android:text="Kitty"
                     android:textColor="#000000"
                     android:textSize="18sp" />
 
@@ -44,7 +45,7 @@
                     android:id="@+id/animalDesc1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Cat description"
+                    android:text="This text matches description for Kitty"
                     android:textColor="#000000"
                     android:textSize="14sp" />
             </LinearLayout>
@@ -76,7 +77,8 @@
                 android:layout_width="64dp"
                 android:layout_height="64dp"
                 android:padding="8dp"
-                android:src="@drawable/ic_launcher_foreground" />
+                android:src="@drawable/ic_launcher_foreground"
+                app:srcCompat="@drawable/catimage2" />
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -88,7 +90,7 @@
                     android:id="@+id/animalName2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Cat name"
+                    android:text="Clawy"
                     android:textColor="#000000"
                     android:textSize="18sp" />
 
@@ -96,7 +98,7 @@
                     android:id="@+id/animalDesc2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Cat description"
+                    android:text="This text matches description for Kitty"
                     android:textColor="#000000"
                     android:textSize="14sp" />
             </LinearLayout>
@@ -106,10 +108,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="#800080"
-                android:text="DETAILS"
-                android:textColor="#FFFFFF"
+                android:clickable="true"
                 android:onClick="onButtonClick"
-                android:clickable="true"/>
+                android:text="DETAILS"
+                android:textColor="#FFFFFF" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
@@ -128,7 +130,8 @@
                 android:layout_width="64dp"
                 android:layout_height="64dp"
                 android:padding="8dp"
-                android:src="@drawable/ic_launcher_foreground" />
+                android:src="@drawable/ic_launcher_foreground"
+                app:srcCompat="@drawable/catimage3" />
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -140,7 +143,7 @@
                     android:id="@+id/animalName3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Cat name"
+                    android:text="Bitty"
                     android:textColor="#000000"
                     android:textSize="18sp" />
 
@@ -148,7 +151,7 @@
                     android:id="@+id/animalDesc3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Cat description"
+                    android:text="This text matches description for Kitty"
                     android:textColor="#000000"
                     android:textSize="14sp" />
             </LinearLayout>
@@ -158,10 +161,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="#800080"
-                android:text="DETAILS"
-                android:textColor="#FFFFFF"
+                android:clickable="true"
+                android:cursorVisible="true"
                 android:onClick="onButtonClick"
-                android:clickable="true"/>
+                android:text="DETAILS"
+                android:textColor="#FFFFFF" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
