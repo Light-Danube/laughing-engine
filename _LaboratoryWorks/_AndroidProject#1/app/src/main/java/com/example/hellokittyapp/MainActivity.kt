@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun openSecondActivity(data: Animal) {
         val intent = Intent(this, KittyData::class.java)
-        //intent.getParcelableExtra<Animal>("Animal")
+        intent.putExtra("Animal", data)
         startActivity(intent)
     }
 }
