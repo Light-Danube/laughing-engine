@@ -8,6 +8,14 @@
     android:orientation="vertical"
     android:background="#FFFFFF">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
+
     <androidx.cardview.widget.CardView
         android:id="@+id/animalView1"
         android:layout_width="match_parent"
