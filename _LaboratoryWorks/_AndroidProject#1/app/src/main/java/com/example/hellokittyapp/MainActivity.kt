@@ -3,7 +3,6 @@ package com.example.hellokittyapp
 import android.os.Bundle
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
-import android.view.View
 import android.widget.Button
 
 class MainActivity : AppCompatActivity() {

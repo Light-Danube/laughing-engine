@@ -13,19 +13,18 @@
         android:theme="@style/Theme.HelloKittyApp"
         tools:targetApi="31">
         <activity
-            android:name=".KittyData"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.HelloKittyApp">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".KittyData"
+            android:exported="false" />
     </application>
 
 </manifest>

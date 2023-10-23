@@ -17,21 +17,19 @@ class KittyData : AppCompatActivity() {
         val animalName = findViewById<TextView>(R.id.catDataName)
         val animalDescription = findViewById<TextView>(R.id.cataDataDesc)
 
+        val animal = intent.getParcelableExtra<Animal>("animal")
+
+        // Check if the data is not null
+        if (animal != null) {
+            // Display the data in the second activity
+            animalName.text = animal.name
+            animalDescription.text = animal.description
+            animalImage.setImageResource(animal.imageID)
+        }
+
         returnButton.setOnClickListener{
             openActivity()
         }
-
-        val receivedAnimal = intent.getSerializableExtra("animal") as Animal
-
-        // Check if the data is not null
-        if (receivedAnimal != null) {
-            // Display the data in the second activity
-            animalName.text = receivedAnimal.name
-            animalDescription.text = receivedAnimal.description
-            animalImage.setImageResource(receivedAnimal.imageID)
-        }
-
-
     }
 
     private fun openActivity() {
