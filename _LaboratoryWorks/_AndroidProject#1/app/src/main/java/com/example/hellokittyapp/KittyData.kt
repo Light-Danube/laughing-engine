@@ -15,11 +15,11 @@ class KittyData : AppCompatActivity() {
         //val animalData = intent.getParcelableExtra<Animal>("Animal")
 
         returnButton.setOnClickListener{
-            openSecondActivity()
+            openActivity()
         }
     }
 
-    private fun openSecondActivity() {
+    private fun openActivity() {
         val intent = Intent(this, MainActivity::class.java)
         //intent.getParcelableExtra<Animal>("Animal")
         startActivity(intent)
