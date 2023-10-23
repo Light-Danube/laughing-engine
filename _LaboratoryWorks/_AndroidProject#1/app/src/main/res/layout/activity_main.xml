@@ -65,6 +65,7 @@
                 android:background="#800080"
                 android:clickable="true"
                 android:text="DETAILS"
+                android:onClick="onButtonClick"
                 android:textColor="#FFFFFF"/>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -116,6 +117,7 @@
                 android:background="#800080"
                 android:text="DETAILS"
                 android:textColor="#FFFFFF"
+                android:onClick="onButtonClick"
                 android:clickable="true"/>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -167,6 +169,7 @@
                 android:background="#800080"
                 android:text="DETAILS"
                 android:textColor="#FFFFFF"
+                android:onClick="onButtonClick"
                 android:clickable="true"/>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
