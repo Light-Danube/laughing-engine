@@ -9,11 +9,15 @@ import androidx.appcompat.app.AppCompatActivity
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.widget.PopupMenu
+import androidx.appcompat.widget.Toolbar
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
+        setSupportActionBar(toolbar)
 
         val detailsButton1 = findViewById<Button>(R.id.animalDetails1)
         val detailsButton2 = findViewById<Button>(R.id.animalDetails2)
@@ -34,9 +38,6 @@ class MainActivity : AppCompatActivity() {
         detailsButton3.setOnClickListener {
             openSecondActivity(animal3)
         }
-
-        val toolbar = findViewById<Toolbar>(R.id.toolbar)
-        setSupportActionBar(toolbar)
 
     }
 

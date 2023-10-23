@@ -13,8 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
-        android:elevation="4dp"
-        app:popupTheme="@style/AppTheme.PopupOverlay" />
+        app:popupTheme="@style/Theme.HelloKittyApp.PopupOverlay" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/animalView1"
