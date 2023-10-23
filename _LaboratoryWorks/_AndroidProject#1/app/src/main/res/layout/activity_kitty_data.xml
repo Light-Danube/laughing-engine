@@ -21,6 +21,8 @@
         android:layout_height="57dp"
         android:layout_marginStart="133dp"
         android:layout_marginTop="385dp"
+        android:textColor="#000000"
+        android:textStyle="bold"
         android:text="@string/app_name"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -31,6 +33,7 @@
         android:layout_height="57dp"
         android:layout_marginStart="133dp"
         android:layout_marginTop="442dp"
+        android:textColor="#000000"
         android:text="@string/app_name"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -41,6 +44,7 @@
         android:layout_height="38dp"
         android:layout_marginStart="144dp"
         android:layout_marginTop="496dp"
+        android:textColor="#000000"
         android:text="Return"
         android:onClick="onButtonClick"
         app:layout_constraintStart_toStartOf="parent"
