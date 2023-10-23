@@ -15,9 +15,9 @@ class MainActivity : AppCompatActivity() {
         val detailsButton2 = findViewById<Button>(R.id.animalDetails2)
         val detailsButton3 = findViewById<Button>(R.id.animalDetails3)
 
-        val animal1 = Animal("Kitty", "This cat number 1", R.id.animalImg1)
-        val animal2 = Animal("Clawy", "This cat number 2", R.id.animaImg2)
-        val animal3 = Animal("Bitty", "This cat number 3", R.id.animalImg3)
+        val animal1 = Animal("Kitty", "This cat number 1", R.drawable.catimage1)
+        val animal2 = Animal("Clawy", "This cat number 2", R.drawable.catimage2)
+        val animal3 = Animal("Bitty", "This cat number 3", R.drawable.catimage3)
 
         detailsButton1.setOnClickListener {
             openSecondActivity(animal1)
