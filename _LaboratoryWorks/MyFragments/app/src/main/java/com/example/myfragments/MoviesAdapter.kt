@@ -19,7 +19,11 @@ class MoviesAdapter(
 
         return MoviesViewHolder(view)
     }
-    
+
+    override fun getItemCount(): Int {
+        return movies.size
+    }
+
     override fun onBindViewHolder(holder: MoviesViewHolder, position: Int) {
         val movie = movies[position]
         holder.bind(movie)
@@ -44,5 +48,4 @@ class MoviesAdapter(
         }
 
     }
-
 }

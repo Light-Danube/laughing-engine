@@ -18,7 +18,13 @@ class PrimeFragment : Fragment() {
         recyclerView = view.findViewById(R.id.recycler_view)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
-        val adapter = MoviesAdapter(listOf(Movie(), Movie())) { _ ->
+        val movies = listOf(
+            Movie("The Matrix", "matrix.jpg", "Sci-fi action film..."),
+            Movie("Inception", "inception.jpg", "Mind-bending thriller..."),
+            Movie("Yoton Yo", "yotonyo.jpg", "Art-house story...")
+        )
+
+        val adapter = MoviesAdapter(movies) { _ ->
             // Navigate to detail
         }
 
