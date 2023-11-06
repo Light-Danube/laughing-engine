@@ -19,5 +19,9 @@
         android:id="@+id/secundaFragment"
         android:name="com.example.myfragments.SecundaFragment"
         tools:layout="@layout/fragment_secunda"
-        android:label="Movie Detail" />
+        android:label="Movie Detail" >
+        <action
+            android:id="@+id/returnBack"
+            app:destination="@id/primeFragment" />
+    </fragment>
 </navigation>

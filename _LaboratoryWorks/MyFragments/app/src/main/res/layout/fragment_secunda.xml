@@ -9,7 +9,7 @@
     <!-- TODO: Update blank fragment layout -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="195dp">
+        android:layout_height="273dp">
 
         <ImageView
             android:id="@+id/movieImage"
@@ -20,17 +20,17 @@
             tools:src="@tools:sample/avatars" />
 
         <ImageView
-            android:id="@+id/movieImage2"
+            android:id="@+id/movieImageAdd1"
             android:layout_width="53dp"
             android:layout_height="54dp"
-            android:layout_marginStart="56dp"
+            android:layout_marginStart="72dp"
             android:layout_marginTop="128dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:src="@tools:sample/avatars" />
 
         <ImageView
-            android:id="@+id/movieImage5"
+            android:id="@+id/movieImageAdd2"
             android:layout_width="53dp"
             android:layout_height="54dp"
             android:layout_marginStart="4dp"
@@ -43,7 +43,7 @@
             android:id="@+id/textView"
             android:layout_width="228dp"
             android:layout_height="17dp"
-            android:layout_marginStart="142dp"
+            android:layout_marginStart="156dp"
             android:layout_marginTop="16dp"
             android:text="TextView"
             app:layout_constraintStart_toStartOf="parent"
@@ -51,23 +51,23 @@
 
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="229dp"
-            android:layout_height="52dp"
-            android:layout_marginStart="14dp"
-            android:layout_marginTop="10dp"
+            android:layout_width="225dp"
+            android:layout_height="126dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="12dp"
             android:text="TextView"
             app:layout_constraintStart_toEndOf="@+id/movieImage"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         <Button
             android:id="@+id/returnButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="76dp"
-            android:layout_marginTop="17dp"
+            android:layout_width="190dp"
+            android:layout_height="81dp"
+            android:layout_marginStart="173dp"
+            android:layout_marginTop="176dp"
             android:text="Return"
-            app:layout_constraintStart_toEndOf="@+id/movieImage"
-            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
