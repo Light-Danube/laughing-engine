@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 class PrimeFragment : Fragment() {
 
     private lateinit var recyclerView: RecyclerView
+    private lateinit var viewModel: MainViewModel
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
