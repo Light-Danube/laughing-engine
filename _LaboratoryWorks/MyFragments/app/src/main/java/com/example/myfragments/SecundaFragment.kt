@@ -18,12 +18,11 @@ class SecundaFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_secunda, container, false)
 
         // Get movie from arguments
-        //val movie = SecundaFragmentArgs.fromBundle(requireArguments()).movie
+        val movie = SecundaFragmentArgs.fromBundle(requireArguments()).movie
 
         // Display movie details
-        //view.findViewById<TextView>(R.id.textView).text = movie.title
+        view.findViewById<TextView>(R.id.textView).text = movie.title
 
         return view
     }
-
 }

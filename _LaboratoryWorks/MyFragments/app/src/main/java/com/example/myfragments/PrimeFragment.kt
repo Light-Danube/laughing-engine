@@ -3,6 +3,8 @@ package com.example.myfragments
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
+import androidx.core.os.bundleOf
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -24,9 +26,20 @@ class PrimeFragment : Fragment() {
             Movie("Yoton Yo", "yotonyo.jpg", "Art-house story...")
         )
 
-        val adapter = MoviesAdapter(movies) { _ ->
-            // Navigate to detail
+        val adapter = MoviesAdapter(movies) { selectedMovie ->
+            // Handle item click here, e.g., navigate to detail screen
+            // You can use 'selectedMovie' to access the clicked movie
+
+            // Get the NavController
+            val navController = Navigation.findNavController(requireView())
+
+            // Create a bundle to pass data to SecundaFragment (if needed)
+            val bundle = bundleOf("movie" to selectedMovie)
+
+            // Navigate to SecundaFragment with the provided bundle
+            navController.navigate(R.id.showMovieDetail, bundle)
         }
+
 
         recyclerView.adapter = adapter
     }
