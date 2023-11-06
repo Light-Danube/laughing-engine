@@ -5,8 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 
 @Suppress("DEPRECATION")
@@ -48,6 +50,12 @@ class SecundaFragment : Fragment() {
                 .override(150, 150) // Set the desired width and height
                 .fitCenter() // Fit the image within the specified dimensions
                 .into(imageView3)
+        }
+
+        val returnButton = view.findViewById<Button>(R.id.returnButton)
+        returnButton.setOnClickListener {
+            // Use the Navigation Component to navigate back to the first fragment
+            findNavController().navigateUp()
         }
 
         return view
