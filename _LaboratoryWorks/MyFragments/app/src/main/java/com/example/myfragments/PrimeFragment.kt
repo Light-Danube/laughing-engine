@@ -11,8 +11,6 @@ import androidx.recyclerview.widget.RecyclerView
 class PrimeFragment : Fragment() {
 
     private lateinit var recyclerView: RecyclerView
-    private lateinit var viewModel: MainViewModel
-
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -43,5 +41,4 @@ class PrimeFragment : Fragment() {
 
         recyclerView.adapter = adapter
     }
-
 }
