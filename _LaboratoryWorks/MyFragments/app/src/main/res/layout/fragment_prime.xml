@@ -9,6 +9,6 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="407dp"
-        android:layout_height="262dp" />
+        android:layout_height="match_parent" />
 
 </FrameLayout>
