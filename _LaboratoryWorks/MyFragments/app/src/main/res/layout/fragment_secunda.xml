@@ -13,8 +13,8 @@
 
         <ImageView
             android:id="@+id/movieImage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="138dp"
+            android:layout_height="134dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:src="@tools:sample/avatars" />
@@ -23,8 +23,8 @@
             android:id="@+id/movieImageAdd1"
             android:layout_width="53dp"
             android:layout_height="54dp"
-            android:layout_marginStart="72dp"
-            android:layout_marginTop="128dp"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="132dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:src="@tools:sample/avatars" />
@@ -34,7 +34,7 @@
             android:layout_width="53dp"
             android:layout_height="54dp"
             android:layout_marginStart="4dp"
-            android:layout_marginTop="128dp"
+            android:layout_marginTop="132dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:src="@tools:sample/avatars" />

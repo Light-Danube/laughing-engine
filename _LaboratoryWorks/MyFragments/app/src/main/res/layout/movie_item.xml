@@ -9,6 +9,8 @@
         android:id="@+id/poster_image"
         android:layout_width="100dp"
         android:layout_height="150dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -17,17 +19,19 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@id/poster_image"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/description_text"
-        android:layout_width="293dp"
-        android:layout_height="105dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="284dp"
+        android:layout_height="157dp"
+        android:layout_marginTop="12dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/title_text"
         app:layout_constraintTop_toBottomOf="@id/title_text" />
 

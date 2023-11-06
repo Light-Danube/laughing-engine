@@ -45,7 +45,7 @@ class MoviesAdapter(
             // Load the image using Glide
             Glide.with(itemView)
                 .load(movie.posterUrl)
-                .override(300, 300) // Set the desired width and height
+                .override(512, 512) // Set the desired width and height
                 .fitCenter() // Fit the image within the specified dimensions
                 .into(imageView)
         }
