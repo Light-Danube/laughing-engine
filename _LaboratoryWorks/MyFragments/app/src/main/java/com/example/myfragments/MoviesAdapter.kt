@@ -43,9 +43,16 @@ class MoviesAdapter(
             descriptionTextView.text = movie.description
 
             Glide.with(itemView)
-                .load(movie.posterUrl)
+                .load(getImageResourceFromName(movie.posterUrl))
                 .into(imageView)
         }
+
+        private fun getImageResourceFromName(imageName: String): Int {
+            val resources = itemView.context.resources
+            return resources.getIdentifier(imageName, "drawable",
+                itemView.context.packageName)
+        }
+
 
     }
 }

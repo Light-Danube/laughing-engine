@@ -1,8 +1,10 @@
 package com.example.myfragments
 
 import android.os.Bundle
+import android.view.LayoutInflater
 import androidx.fragment.app.Fragment
 import android.view.View
+import android.view.ViewGroup
 import androidx.core.os.bundleOf
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -11,6 +13,14 @@ import androidx.recyclerview.widget.RecyclerView
 class PrimeFragment : Fragment() {
 
     private lateinit var recyclerView: RecyclerView
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        return inflater.inflate(R.layout.fragment_prime, container, false)
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -21,7 +31,8 @@ class PrimeFragment : Fragment() {
         val movies = listOf(
             Movie("The Matrix", "matrix.jpg", "Sci-fi action film..."),
             Movie("Inception", "inception.jpg", "Mind-bending thriller..."),
-            Movie("Yoton Yo", "yotonyo.jpg", "Art-house story...")
+            Movie("Yoton Yo", "yotonyo.jpg", "Art-house story..."),
+            Movie("The Xatrim", "matrix.jpg", "Art-house story...")
         )
 
         val adapter = MoviesAdapter(movies) { selectedMovie ->
