@@ -10,10 +10,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // Find nav host fragment
-        //val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_graph)
-                //as NavHostFragment
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.nav_graph) as NavHostFragment
 
         // Get nav controller
-        //val navController = navHostFragment.navController
+        val navController = navHostFragment.navController
     }
 }
