@@ -9,7 +9,7 @@
         android:id="@+id/weatherFragment"
         android:name="com.example.trueweather.presentation.WeatherFragment"
         android:label="fragment_weather"
-        tools:layout="@layout/fragment_weather" >
+        tools:layout="@layout/fragment_hero" >
         <action
             android:id="@+id/action_weatherFragment_to_fragment_prime"
             app:destination="@id/fragment_prime" />
