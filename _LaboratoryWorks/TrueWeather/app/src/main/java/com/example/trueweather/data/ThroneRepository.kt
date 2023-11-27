@@ -23,7 +23,15 @@ class ThroneRepository(private val api: ThroneAPIInterface) {
                 value = it.toThroneHero()
             }
         } ?: MutableLiveData<ThroneHero>().apply {
-            value = ThroneHero()
+            value = ThroneHero(
+                0,
+                "",
+                 "",
+                "",
+                "",
+                "",
+                "",
+                "")
         }
     }
 }
