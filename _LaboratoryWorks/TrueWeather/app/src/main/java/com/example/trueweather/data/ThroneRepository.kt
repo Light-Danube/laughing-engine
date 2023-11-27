@@ -6,11 +6,7 @@ import com.example.trueweather.data.remote.ThroneAPIFactory
 import com.example.trueweather.data.remote.ThroneAPIInterface
 import com.example.trueweather.data.remote.model.ThroneHero
 
-class ThroneRepository : BaseRepository() {
-
-    private val api: ThroneAPIInterface by lazy {
-        ThroneAPIFactory().create()
-    }
+class ThronesRepository(private val api: ThroneAPIInterface) {
 
     suspend fun getCharacters(): LiveData<List<ThroneHero>> {
         return api.getCharacters().execute().body()?.let {
@@ -32,3 +28,4 @@ class ThroneRepository : BaseRepository() {
         }
     }
 }
+
