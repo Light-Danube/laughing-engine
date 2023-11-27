@@ -1,5 +1,6 @@
 package com.example.trueweather.data.remote
 
+import com.example.trueweather.data.ThroneRepository
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
@@ -12,5 +13,7 @@ class ThroneAPIFactory {
             .create(ThroneAPIInterface::class.java)
     }
 
-
+    fun createRepository(): ThroneRepository {
+        return ThroneRepository(create())
+    }
 }
