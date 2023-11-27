@@ -8,7 +8,7 @@ import com.example.trueweather.data.remote.model.ThroneHero
 
 class ThroneRepository(private val api: ThroneAPIInterface) {
     suspend fun getCharacters(): LiveData<List<ThroneHero>> {
-        return api.getCharacters().execute().body()?.let {
+        return api.getCharacters().await().body()?.let {
             MutableLiveData<List<ThroneHero>>().apply {
                 value = it.map { it.toThroneHero() }
             }
@@ -18,7 +18,7 @@ class ThroneRepository(private val api: ThroneAPIInterface) {
     }
 
     suspend fun getCharacter(id: Int): LiveData<ThroneHero> {
-        return api.getCharacter(id).execute().body()?.let {
+        return api.getCharacter(id).await().body()?.let {
             MutableLiveData<ThroneHero>().apply {
                 value = it.toThroneHero()
             }
