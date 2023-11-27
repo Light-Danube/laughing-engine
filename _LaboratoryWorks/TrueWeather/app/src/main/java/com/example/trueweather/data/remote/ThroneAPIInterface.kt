@@ -11,4 +11,7 @@ interface ThroneAPIInterface {
 
     @GET("characters/{id}")
     suspend fun getCharacter(@Path("id") id: Int): Response<ThroneHero>
+
+    @GET("characters/{id}/image")
+    suspend fun getCharacterImage(@Path("id") id: Int): Response<String>
 }
