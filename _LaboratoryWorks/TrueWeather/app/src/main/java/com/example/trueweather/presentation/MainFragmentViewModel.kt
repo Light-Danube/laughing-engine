@@ -5,7 +5,6 @@ import androidx.lifecycle.ViewModel
 import com.example.trueweather.data.ThroneRepository
 
 class MainFragmentViewModel(private val repository: ThroneRepository): ViewModel() {
-
     val id: MutableLiveData<Int?> = MutableLiveData(null)
 
     suspend fun loadIdFromApi() {
