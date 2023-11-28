@@ -14,7 +14,7 @@ class MainFragmentViewModel(private val repository: ThroneRepository): ViewModel
 
     fun loadCharacters() {
         viewModelScope.launch {
-            val characters = repository.getCharacters()
+            val characters = repository.getCharacters().value
             totalCharacters.value = characters?.size ?: 0
         }
     }
