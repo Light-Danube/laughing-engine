@@ -30,7 +30,7 @@ class MainFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel = ViewModelProvider(this).get(MainFragmentViewModel::class.java)
+        viewModel = ViewModelProvider(this)[MainFragmentViewModel::class.java]
 
         val loadDataButton = view.findViewById<Button>(R.id.dataLoadBtn)
         val totalTextView = view.findViewById<TextView>(R.id.totalIDField)
