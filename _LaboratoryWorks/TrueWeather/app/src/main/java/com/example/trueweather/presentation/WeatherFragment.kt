@@ -11,6 +11,7 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.navigation.fragment.findNavController
+import com.bumptech.glide.Glide
 import com.example.trueweather.R
 import com.example.trueweather.data.remote.model.ThroneHero
 
@@ -51,8 +52,12 @@ class WeatherFragment : Fragment() {
         imageNameText.text = "Image:" + " " + character?.image ?: "Character not found"
         imageURLNameText.text = "Image URL:" + " " + character?.imgURL ?: "Character not found"
 
-        //Loading image:
-        
+        // Load the image using Glide
+        character?.imgURL?.let { url ->
+            Glide.with(this)
+                .load(url)
+                .into(charPortraitImg)
+        }
 
 
         val returnButton = view.findViewById<Button>(R.id.returnBtn)
