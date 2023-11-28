@@ -33,7 +33,7 @@ class MainFragment : Fragment() {
         jsonFragment.arguments = bundle
 
         parentFragmentManager.beginTransaction()
-            .replace(R.id.fragment_secunda, jsonFragment)
+            .replace(R.id.JSONFragment, jsonFragment)
             .addToBackStack(null)
             .commit()
     }
