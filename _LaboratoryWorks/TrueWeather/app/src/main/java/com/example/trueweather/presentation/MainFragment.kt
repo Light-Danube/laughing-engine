@@ -11,12 +11,15 @@ import android.widget.EditText
 import android.widget.TextView
 import androidx.lifecycle.ViewModelProvider
 import com.example.trueweather.R
+import com.example.trueweather.data.MainFragmentViewModelFactory
 import com.example.trueweather.data.ThroneRepository
+import com.example.trueweather.data.remote.ThroneAPIFactory
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 
 class MainFragment : Fragment() {
     private lateinit var viewModel: MainFragmentViewModel
+    private val repository = ThroneRepository(ThroneAPIFactory().create())
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,7 +33,8 @@ class MainFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel = ViewModelProvider(this)[MainFragmentViewModel::class.java]
+        val viewModelFactory = MainFragmentViewModelFactory(repository)
+        viewModel = ViewModelProvider(this, viewModelFactory)[MainFragmentViewModel::class.java]
 
         val loadDataButton = view.findViewById<Button>(R.id.dataLoadBtn)
         val totalTextView = view.findViewById<TextView>(R.id.totalIDField)

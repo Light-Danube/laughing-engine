@@ -5,7 +5,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.trueweather.presentation.MainFragmentViewModel
 
 class MainFragmentViewModelFactory(private val repository: ThroneRepository) : ViewModelProvider.Factory {
-    fun <T : ViewModel?> create(modelClass: Class<T>): T {
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(MainFragmentViewModel::class.java)) {
             @Suppress("UNCHECKED_CAST")
             return MainFragmentViewModel(repository) as T
@@ -13,3 +13,4 @@ class MainFragmentViewModelFactory(private val repository: ThroneRepository) : V
         throw IllegalArgumentException("Unknown ViewModel class")
     }
 }
+
