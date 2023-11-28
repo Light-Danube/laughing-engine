@@ -10,12 +10,14 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.viewModelScope
 import com.example.trueweather.R
 import com.example.trueweather.data.MainFragmentViewModelFactory
 import com.example.trueweather.data.ThroneRepository
 import com.example.trueweather.data.remote.ThroneAPIFactory
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class MainFragment : Fragment() {
     private lateinit var viewModel: MainFragmentViewModel
@@ -58,6 +60,10 @@ class MainFragment : Fragment() {
 
         jsonButton.setOnClickListener {
             // Display JSON response for character
+            val id = idInput.text.toString().toInt()
+            viewModel.viewModelScope.launch {
+                viewModel.getCharacterById(id)
+            }
         }
 
     }

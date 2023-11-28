@@ -24,4 +24,10 @@ class MainFragmentViewModel(private val repository: ThroneRepository): ViewModel
             repository.getCharacter(id)
         }.await()
     }
+
+    private val _selectedCharacter = MutableLiveData<ThroneHero?>()
+    suspend fun getCharacterById(id: Int) {
+        val character = repository.getCharacter(id)?.value
+        _selectedCharacter.value = character
+    }
 }
