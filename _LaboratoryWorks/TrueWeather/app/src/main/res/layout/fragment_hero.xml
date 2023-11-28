@@ -97,11 +97,11 @@
 
         <Button
             android:id="@+id/returnBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="199dp"
+            android:layout_height="52dp"
             android:layout_marginStart="190dp"
             android:layout_marginTop="377dp"
-            android:text="@string/app_name"
+            android:text="Return"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 

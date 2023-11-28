@@ -11,15 +11,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:layout_width="214dp"
-            android:layout_height="43dp"
-            android:layout_marginStart="112dp"
-            android:layout_marginTop="172dp"
-            android:text="@string/app_name"
-            android:textAlignment="viewEnd"
-            android:textSize="34sp"
-            android:textStyle="bold"
+        <Button
+            android:id="@+id/dataLoadBtn"
+            android:layout_width="170dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="96dp"
+            android:layout_marginTop="280dp"
+            android:text="Load GOT Data"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -27,19 +25,9 @@
             android:id="@+id/totalIDField"
             android:layout_width="234dp"
             android:layout_height="21dp"
-            android:layout_marginStart="96dp"
-            android:layout_marginTop="232dp"
+            android:layout_marginStart="72dp"
+            android:layout_marginTop="244dp"
             android:text="Currently loaded 0 ID out of 0 ID"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/dataLoadBtn"
-            android:layout_width="170dp"
-            android:layout_height="48dp"
-            android:layout_marginStart="120dp"
-            android:layout_marginTop="268dp"
-            android:text="Load GOT Data"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -47,8 +35,8 @@
             android:id="@+id/idField"
             android:layout_width="232dp"
             android:layout_height="48dp"
-            android:layout_marginStart="96dp"
-            android:layout_marginTop="348dp"
+            android:layout_marginStart="72dp"
+            android:layout_marginTop="360dp"
             android:inputType="number"
             android:text="Write down ID"
             app:layout_constraintStart_toStartOf="parent"
@@ -58,8 +46,8 @@
             android:id="@+id/formViewBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="56dp"
-            android:layout_marginTop="412dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="424dp"
             android:text="View in Form"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -68,9 +56,21 @@
             android:id="@+id/jsonViewBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="216dp"
-            android:layout_marginTop="412dp"
+            android:layout_marginStart="192dp"
+            android:layout_marginTop="424dp"
             android:text="View in JSON"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="214dp"
+            android:layout_height="43dp"
+            android:layout_marginStart="88dp"
+            android:layout_marginTop="184dp"
+            android:text="@string/app_name"
+            android:textAlignment="viewEnd"
+            android:textSize="34sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
