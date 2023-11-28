@@ -85,7 +85,7 @@ class MainFragment : Fragment() {
 
         formButton.setOnClickListener {
             val id = idInput.text.toString().toInt()
-            // Display JSON response for character
+            // Display Form response for character
             viewModel.viewModelScope.launch {
                 hasClickedJSON = false
                 viewModel.getCharacterById(id)
