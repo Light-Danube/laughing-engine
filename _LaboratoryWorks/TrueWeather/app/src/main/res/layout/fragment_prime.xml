@@ -38,7 +38,6 @@
             android:layout_marginStart="72dp"
             android:layout_marginTop="360dp"
             android:inputType="number"
-            android:text="Write down ID"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
