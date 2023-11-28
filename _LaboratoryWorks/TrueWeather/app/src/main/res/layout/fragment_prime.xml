@@ -33,6 +33,7 @@
 
         <EditText
             android:id="@+id/idField"
+            android:visibility="invisible"
             android:layout_width="232dp"
             android:layout_height="48dp"
             android:layout_marginStart="72dp"
@@ -43,6 +44,7 @@
 
         <Button
             android:id="@+id/formViewBtn"
+            android:visibility="invisible"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
@@ -53,6 +55,7 @@
 
         <Button
             android:id="@+id/jsonViewBtn"
+            android:visibility="invisible"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="192dp"

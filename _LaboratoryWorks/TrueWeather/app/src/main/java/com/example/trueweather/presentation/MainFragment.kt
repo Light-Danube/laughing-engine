@@ -74,6 +74,9 @@ class MainFragment : Fragment() {
 
         loadDataButton.setOnClickListener {
             viewModel.loadCharacters()
+            idInput.visibility = View.VISIBLE
+            formButton.visibility = View.VISIBLE
+            jsonButton.visibility = View.VISIBLE
         }
 
         viewModel.totalCharacters.observe(viewLifecycleOwner) { count ->
