@@ -28,6 +28,10 @@ class MainFragmentViewModel(private val repository: ThroneRepository): ViewModel
     val _selectedCharacter = MutableLiveData<ThroneHero?>()
     suspend fun getCharacterById(id: Int) {
         val character = repository.getCharacter(id)?.value
-        _selectedCharacter.value = character
+        _selectedCharacter.value = character?.let{
+            it.image?.let { url ->
+                it.copy(imgURL = "https://thronesapi.com/assets/images/$url")
+            } ?: it
+        }
     }
 }
