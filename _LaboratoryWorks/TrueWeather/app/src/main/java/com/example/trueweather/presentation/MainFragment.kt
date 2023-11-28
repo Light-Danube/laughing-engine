@@ -37,7 +37,7 @@ class MainFragment : Fragment() {
         navController.navigate(R.id.JSONFragment, bundle) // Use the ID specified in your navigation graph
     }
 
-    private fun navigateToweatherFragment(character: ThroneHero?) {
+    private fun navigateToWeatherFragment(character: ThroneHero?) {
         val weatFragment = WeatherFragment()
         val bundle = Bundle().apply {
             putParcelable("character", character as Parcelable?)
