@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import com.example.trueweather.R
 
 class MainFragment : Fragment() {
+    private lateinit var viewModel: MainFragmentViewModel
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
