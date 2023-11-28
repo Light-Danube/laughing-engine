@@ -10,41 +10,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/formViewBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="56dp"
-            android:layout_marginTop="276dp"
-            android:text="View in Form"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/jsonViewBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="216dp"
-            android:layout_marginTop="276dp"
-            android:text="View in JSON"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/dataLoadBtn"
-            android:layout_width="170dp"
-            android:layout_height="48dp"
-            android:layout_marginStart="120dp"
-            android:layout_marginTop="132dp"
-            android:text="Load GOT Data"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
         <TextView
             android:layout_width="214dp"
             android:layout_height="43dp"
             android:layout_marginStart="96dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="168dp"
             android:text="@string/app_name"
             android:textAlignment="viewEnd"
             android:textSize="34sp"
@@ -57,19 +27,49 @@
             android:layout_width="234dp"
             android:layout_height="21dp"
             android:layout_marginStart="96dp"
-            android:layout_marginTop="96dp"
+            android:layout_marginTop="232dp"
             android:text="Currently loaded 0 ID out of 0 ID"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
+        <Button
+            android:id="@+id/dataLoadBtn"
+            android:layout_width="170dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="268dp"
+            android:text="Load GOT Data"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
             android:id="@+id/idField"
             android:layout_width="232dp"
             android:layout_height="48dp"
             android:layout_marginStart="96dp"
-            android:layout_marginTop="220dp"
+            android:layout_marginTop="348dp"
             android:inputType="number"
             android:text="Write down ID"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/formViewBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="412dp"
+            android:text="View in Form"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/jsonViewBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="216dp"
+            android:layout_marginTop="412dp"
+            android:text="View in JSON"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
