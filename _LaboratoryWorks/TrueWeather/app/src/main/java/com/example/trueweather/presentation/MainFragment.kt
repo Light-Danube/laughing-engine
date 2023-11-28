@@ -12,6 +12,7 @@ import android.widget.EditText
 import android.widget.TextView
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
+import androidx.navigation.fragment.findNavController
 import com.example.trueweather.R
 import com.example.trueweather.data.MainFragmentViewModelFactory
 import com.example.trueweather.data.ThroneRepository
@@ -32,10 +33,8 @@ class MainFragment : Fragment() {
         }
         jsonFragment.arguments = bundle
 
-        parentFragmentManager.beginTransaction()
-            .replace(R.id.JSONFragment, jsonFragment)
-            .addToBackStack(null)
-            .commit()
+        val navController = findNavController()
+        navController.navigate(R.id.JSONFragment, bundle) // Use the ID specified in your navigation graph
     }
 
 

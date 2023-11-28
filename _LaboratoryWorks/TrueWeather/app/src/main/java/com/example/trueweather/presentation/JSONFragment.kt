@@ -28,7 +28,7 @@ class JSONFragment : Fragment() {
         val character = arguments?.getParcelable<Parcelable>("character") as? ThroneHero
 
         // Assuming you have a TextView with ID "jsonTextView" in your layout
-        val jsonTextView = view.findViewById<TextView>(R.id.jsonAppText)
+        val jsonTextView = view.findViewById<TextView>(R.id.jsonDataText)
         jsonTextView.text = character?.toString() ?: "Character not found"
     }
 }
