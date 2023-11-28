@@ -36,7 +36,7 @@ class JSONFragment : Fragment() {
         val returnButton = view.findViewById<Button>(R.id.returnJSONBtn)
         returnButton.setOnClickListener {
             // Use the Navigation Component to navigate back to the first fragment
-            findNavController().navigateUp()
+            findNavController().navigate(R.id.fragment_prime)
         }
     }
 }
