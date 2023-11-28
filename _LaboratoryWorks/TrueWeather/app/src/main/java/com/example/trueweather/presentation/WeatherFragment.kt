@@ -51,6 +51,9 @@ class WeatherFragment : Fragment() {
         imageNameText.text = "Image:" + " " + character?.image ?: "Character not found"
         imageURLNameText.text = "Image URL:" + " " + character?.imgURL ?: "Character not found"
 
+        //Loading image:
+        
+
 
         val returnButton = view.findViewById<Button>(R.id.returnBtn)
         returnButton.setOnClickListener {
