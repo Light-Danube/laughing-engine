@@ -83,7 +83,11 @@ class MainFragment : Fragment() {
             val id = idInput.text.toString().toInt()
             // Display JSON response for character
             viewModel.viewModelScope.launch {
-                viewModel.getCharacterById(id)
+                val character = viewModel.getCharacterById(id)
+
+                if (character != null) {
+                    navigateToJSONFragment(character)
+                }
             }
 
         }
