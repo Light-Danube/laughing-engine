@@ -9,7 +9,8 @@ class MainFragmentViewModel(private val repository: ThroneRepository): ViewModel
 
     suspend fun loadIdFromApi() {
         // Використання ThroneUseCase для отримання ідентифікатора персонажа з API
-        val id = repository.getCharacters().body()?.firstOrNull()?.id
+        val characters = repository.getCharacters().body() ?: return
+        val id = characters.firstOrNull()?.id
         // Присвоєння отриманого значення id до LiveData
         id?.let { this.id.value = it }
     }
