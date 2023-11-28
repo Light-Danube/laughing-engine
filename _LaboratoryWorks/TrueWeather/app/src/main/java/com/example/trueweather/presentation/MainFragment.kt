@@ -50,12 +50,11 @@ class MainFragment : Fragment() {
             totalTextView.text = "Currently loaded $count IDs"
         }
 
-        /*formButton.setOnClickListener {
+        formButton.setOnClickListener {
             val id = idInput.text.toString().toInt()
-            viewModel.getCharacter(id)?.observe(viewLifecycleOwner) { hero ->
-                // Display hero data in UI
-            }
-        }*/
+            // Display JSON response for character
+
+        }
 
         jsonButton.setOnClickListener {
             // Display JSON response for character
