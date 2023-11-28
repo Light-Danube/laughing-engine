@@ -12,8 +12,4 @@ class ThroneAPIFactory {
             .build()
             .create(ThroneAPIInterface::class.java)
     }
-
-    fun createRepository(): ThroneRepository {
-        return ThroneRepository(create())
-    }
 }
