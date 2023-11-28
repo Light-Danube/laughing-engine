@@ -37,6 +37,18 @@ class MainFragment : Fragment() {
         navController.navigate(R.id.JSONFragment, bundle) // Use the ID specified in your navigation graph
     }
 
+    private fun navigateToweatherFragment(character: ThroneHero?) {
+        val weatFragment = WeatherFragment()
+        val bundle = Bundle().apply {
+            putParcelable("character", character as Parcelable?)
+        }
+        weatFragment.arguments = bundle
+
+        val navController = findNavController()
+        navController.navigate(R.id.weatherFragment,
+            bundle) // Use the ID specified in your navigation graph
+    }
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -70,6 +82,9 @@ class MainFragment : Fragment() {
         formButton.setOnClickListener {
             val id = idInput.text.toString().toInt()
             // Display JSON response for character
+            viewModel.viewModelScope.launch {
+                viewModel.getCharacterById(id)
+            }
 
         }
 

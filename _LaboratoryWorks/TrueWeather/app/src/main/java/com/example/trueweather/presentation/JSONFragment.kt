@@ -6,7 +6,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
+import androidx.navigation.fragment.findNavController
 import com.example.trueweather.R
 import com.example.trueweather.data.remote.model.ThroneHero
 
@@ -30,5 +32,11 @@ class JSONFragment : Fragment() {
         // Assuming you have a TextView with ID "jsonTextView" in your layout
         val jsonTextView = view.findViewById<TextView>(R.id.jsonDataText)
         jsonTextView.text = character?.toString() ?: "Character not found"
+
+        val returnButton = view.findViewById<Button>(R.id.returnJSONBtn)
+        returnButton.setOnClickListener {
+            // Use the Navigation Component to navigate back to the first fragment
+            findNavController().navigateUp()
+        }
     }
 }
