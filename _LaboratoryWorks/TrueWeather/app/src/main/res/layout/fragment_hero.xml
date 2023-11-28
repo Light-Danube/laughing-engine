@@ -10,7 +10,7 @@
     <!-- TODO: Update blank fragment layout -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="434dp">
+        android:layout_height="523dp">
 
         <ImageView
             android:id="@+id/charPortrait"
@@ -95,12 +95,32 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/titleName" />
 
+        <TextView
+            android:id="@+id/imageName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:text="TextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/familyName" />
+
+        <TextView
+            android:id="@+id/imageURLName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:text="TextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageName" />
+
         <Button
             android:id="@+id/returnBtn"
             android:layout_width="199dp"
             android:layout_height="52dp"
-            android:layout_marginStart="190dp"
-            android:layout_marginTop="377dp"
+            android:layout_marginStart="196dp"
+            android:layout_marginTop="464dp"
             android:text="Return"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

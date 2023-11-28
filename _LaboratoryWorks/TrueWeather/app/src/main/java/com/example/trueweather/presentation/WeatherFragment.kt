@@ -38,6 +38,8 @@ class WeatherFragment : Fragment() {
         val fullNameText = view.findViewById<TextView>(R.id.fullName)
         val titleNameText = view.findViewById<TextView>(R.id.titleName)
         val familyNameText = view.findViewById<TextView>(R.id.familyName)
+        val imageNameText = view.findViewById<TextView>(R.id.imageName)
+        val imageURLNameText = view.findViewById<TextView>(R.id.imageURLName)
 
         heroNameText.text = character?.fullName ?: "Character not found"
         idNameText.text = "ID:" + " " + (character?.id ?: "Character not found").toString()
@@ -46,6 +48,8 @@ class WeatherFragment : Fragment() {
         fullNameText.text = "Full Name:" + " " + character?.fullName ?: "Character not found"
         titleNameText.text = "Title:" + " " + character?.title ?: "Character not found"
         familyNameText.text = "Family:" + " " + character?.family ?: "Character not found"
+        imageNameText.text = "Image:" + " " + character?.image ?: "Character not found"
+        imageURLNameText.text = "Image URL:" + " " + character?.imgURL ?: "Character not found"
 
 
         val returnButton = view.findViewById<Button>(R.id.returnBtn)
