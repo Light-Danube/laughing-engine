@@ -19,14 +19,14 @@ class ThroneRepository(private val api: ThroneAPIInterface) {
             MutableLiveData<List<ThroneHero>>().apply {
                 value = data.map {
                     ThroneHero(
-                        id = it.id,
-                        firstName = it.firstName, // Assign a value to firstName
-                        lastName = it.lastName,
-                        fullName = it.fullName,
-                        title = it.title,
-                        family = it.family, // Assign a value to family
-                        image = it.image,
-                        imgURL = it.imgURL
+                        it.id,
+                        it.firstName, // Assign a value to firstName
+                        it.lastName,
+                        it.fullName,
+                        it.title,
+                        it.family, // Assign a value to family
+                        it.image,
+                        it.imgURL
                     )
                 }
             }
@@ -46,14 +46,14 @@ class ThroneRepository(private val api: ThroneAPIInterface) {
             // Create a ThroneHero object from the data
             MutableLiveData<ThroneHero>().apply {
                 value = ThroneHero(
-                    id = data.id,
-                    firstName = data.firstName, // Assign a value to firstName
-                    lastName = data.lastName,
-                    fullName = data.fullName,
-                    title = data.title,
-                    family = data.family, // Assign a value to family
-                    image = data.image,
-                    imgURL = data.imgURL
+                    data.id,
+                    data.firstName, // Assign a value to firstName
+                    data.lastName,
+                    data.fullName,
+                    data.title,
+                    data.family, // Assign a value to family
+                    data.image,
+                    data.imgURL
                 )
             }
         } else {
