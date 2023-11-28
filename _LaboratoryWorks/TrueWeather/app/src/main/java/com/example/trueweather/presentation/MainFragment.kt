@@ -98,15 +98,7 @@ class MainFragment : Fragment() {
 
         viewModel._selectedCharacter.observe(viewLifecycleOwner) { character ->
             if (character != null) {
-                when (view.id) {
-                    R.id.formViewBtn -> {
-                        navigateToWeatherFragment(character)
-                    }
-
-                    R.id.jsonViewBtn -> {
-                        navigateToJSONFragment(character)
-                    }
-                }
+                navigateToJSONFragment(character)
             }
         }
 
