@@ -22,5 +22,17 @@
         <action
             android:id="@+id/action_fragment_prime_to_weatherFragment"
             app:destination="@id/weatherFragment" />
+        <action
+            android:id="@+id/action_fragment_prime_to_JSONFragment"
+            app:destination="@id/JSONFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/JSONFragment"
+        android:name="com.example.trueweather.presentation.JSONFragment"
+        android:label="fragment_secunda"
+        tools:layout="@layout/fragment_secunda" >
+        <action
+            android:id="@+id/action_JSONFragment_to_fragment_prime"
+            app:destination="@id/fragment_prime" />
     </fragment>
 </navigation>
