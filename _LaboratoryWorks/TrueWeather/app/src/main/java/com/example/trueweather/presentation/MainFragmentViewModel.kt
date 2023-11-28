@@ -25,7 +25,7 @@ class MainFragmentViewModel(private val repository: ThroneRepository): ViewModel
         }.await()
     }
 
-    private val _selectedCharacter = MutableLiveData<ThroneHero?>()
+    val _selectedCharacter = MutableLiveData<ThroneHero?>()
     suspend fun getCharacterById(id: Int) {
         val character = repository.getCharacter(id)?.value
         _selectedCharacter.value = character

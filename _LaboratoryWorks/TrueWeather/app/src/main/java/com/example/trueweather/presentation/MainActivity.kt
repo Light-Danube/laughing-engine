@@ -2,6 +2,7 @@ package com.example.trueweather.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Parcelable
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.NavHostFragment
 import com.example.trueweather.R
@@ -19,18 +20,4 @@ class MainActivity : AppCompatActivity() {
         // Get nav controller
         val navController = navHostFragment.navController
     }
-
-    private fun navigateToJSONFragment(character: ThroneHero?) {
-        val jsonFragment = JSONFragment()
-        val bundle = Bundle().apply {
-            putParcelable("character", character)
-        }
-        jsonFragment.arguments = bundle
-
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.fragment_secunda, jsonFragment)
-            .addToBackStack(null)
-            .commit()
-    }
-
 }

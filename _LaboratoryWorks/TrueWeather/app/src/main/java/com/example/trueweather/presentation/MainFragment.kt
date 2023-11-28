@@ -2,6 +2,7 @@ package com.example.trueweather.presentation
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.os.Parcelable
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -15,6 +16,7 @@ import com.example.trueweather.R
 import com.example.trueweather.data.MainFragmentViewModelFactory
 import com.example.trueweather.data.ThroneRepository
 import com.example.trueweather.data.remote.ThroneAPIFactory
+import com.example.trueweather.data.remote.model.ThroneHero
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -22,6 +24,20 @@ import kotlinx.coroutines.launch
 class MainFragment : Fragment() {
     private lateinit var viewModel: MainFragmentViewModel
     private val repository = ThroneRepository(ThroneAPIFactory().create())
+
+    private fun navigateToJSONFragment(character: ThroneHero?) {
+        val jsonFragment = JSONFragment()
+        val bundle = Bundle().apply {
+            putParcelable("character", character as Parcelable?)
+        }
+        jsonFragment.arguments = bundle
+
+        parentFragmentManager.beginTransaction()
+            .replace(R.id.fragment_secunda, jsonFragment)
+            .addToBackStack(null)
+            .commit()
+    }
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -63,6 +79,12 @@ class MainFragment : Fragment() {
             val id = idInput.text.toString().toInt()
             viewModel.viewModelScope.launch {
                 viewModel.getCharacterById(id)
+            }
+        }
+
+        viewModel._selectedCharacter.observe(viewLifecycleOwner) { character ->
+            if (character != null) {
+                navigateToJSONFragment(character)
             }
         }
 
