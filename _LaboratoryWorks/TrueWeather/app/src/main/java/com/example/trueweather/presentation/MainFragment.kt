@@ -83,8 +83,9 @@ class MainFragment : Fragment() {
             val id = idInput.text.toString().toInt()
             // Display JSON response for character
             viewModel.viewModelScope.launch {
-                viewModel.getCharacterById(id)
-
+                viewModel.getCharacterById(id)?.let { character ->
+                    navigateToWeatherFragment(character as ThroneHero)
+                }
             }
 
         }
@@ -93,7 +94,9 @@ class MainFragment : Fragment() {
             // Display JSON response for character
             val id = idInput.text.toString().toInt()
             viewModel.viewModelScope.launch {
-                viewModel.getCharacterById(id)
+                viewModel.getCharacterById(id)?.let { character ->
+                    navigateToJSONFragment(character as ThroneHero)
+                }
             }
         }
 
