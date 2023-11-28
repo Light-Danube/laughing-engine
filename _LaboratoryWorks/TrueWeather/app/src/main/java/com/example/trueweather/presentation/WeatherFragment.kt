@@ -1,5 +1,6 @@
 package com.example.trueweather.presentation
 
+import android.media.Image
 import android.os.Bundle
 import android.os.Parcelable
 import androidx.fragment.app.Fragment
@@ -7,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.navigation.fragment.findNavController
 import com.example.trueweather.R
@@ -27,9 +29,24 @@ class WeatherFragment : Fragment() {
 
         val character = arguments?.getParcelable<Parcelable>("character") as? ThroneHero
 
-        // Assuming you have a TextView with ID "jsonTextView" in your layout
-        //val jsonTextView = view.findViewById<TextView>(R.id.jsonDataText)
-        //jsonTextView.text = character?.toString() ?: "Character not found"
+        // Let find out our data for our form:
+        val charPortraitImg = view.findViewById<ImageView>(R.id.charPortrait)
+        val heroNameText = view.findViewById<TextView>(R.id.heroName)
+        val idNameText = view.findViewById<TextView>(R.id.idName)
+        val firstNameText = view.findViewById<TextView>(R.id.firstName)
+        val lastNameText = view.findViewById<TextView>(R.id.lastName)
+        val fullNameText = view.findViewById<TextView>(R.id.fullName)
+        val titleNameText = view.findViewById<TextView>(R.id.titleName)
+        val familyNameText = view.findViewById<TextView>(R.id.familyName)
+
+        heroNameText.text = character?.fullName ?: "Character not found"
+        idNameText.text = "ID:" + " " + (character?.id ?: "Character not found").toString()
+        firstNameText.text = "First Name:" + " " + character?.firstName ?: "Character not found"
+        lastNameText.text = "Last Name:" + " " + character?.lastName ?: "Character not found"
+        fullNameText.text = "Full Name:" + " " + character?.fullName ?: "Character not found"
+        titleNameText.text = "Title:" + " " + character?.title ?: "Character not found"
+        familyNameText.text = "Family:" + " " + character?.family ?: "Character not found"
+
 
         val returnButton = view.findViewById<Button>(R.id.returnBtn)
         returnButton.setOnClickListener {
