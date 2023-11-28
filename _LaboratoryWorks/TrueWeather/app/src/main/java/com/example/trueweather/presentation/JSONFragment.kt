@@ -29,13 +29,13 @@ class JSONFragment : Fragment() {
 
         val character = arguments?.getParcelable<Parcelable>("character") as? ThroneHero
 
-        // Assuming you have a TextView with ID "jsonTextView" in your layout
+        // Assuming we have a TextView with ID "jsonTextView" in layout
         val jsonTextView = view.findViewById<TextView>(R.id.jsonDataText)
         jsonTextView.text = character?.toString() ?: "Character not found"
 
         val returnButton = view.findViewById<Button>(R.id.returnJSONBtn)
         returnButton.setOnClickListener {
-            // Use the Navigation Component to navigate back to the first fragment
+            // Using the Navigation Component to navigate back to the first fragment
             findNavController().navigate(R.id.fragment_prime)
         }
     }
