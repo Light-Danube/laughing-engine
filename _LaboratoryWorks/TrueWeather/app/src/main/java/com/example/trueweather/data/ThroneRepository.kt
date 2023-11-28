@@ -2,8 +2,6 @@ package com.example.trueweather.data
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import kotlinx.coroutines.flow.map
-import retrofit2.Response
 
 import com.example.trueweather.data.remote.ThroneAPIInterface
 import com.example.trueweather.data.remote.model.ThroneHero
