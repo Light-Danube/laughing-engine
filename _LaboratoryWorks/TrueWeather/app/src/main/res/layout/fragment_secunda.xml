@@ -27,14 +27,16 @@
             android:id="@+id/jsonDataText"
             android:layout_width="338dp"
             android:layout_height="234dp"
+            android:layout_marginStart="53dp"
+            android:layout_marginTop="213dp"
             android:text="TextView"
-            tools:layout_editor_absoluteX="53dp"
-            tools:layout_editor_absoluteY="213dp" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/returnJSONBtn"
             android:layout_width="335dp"
-            android:layout_height="45dp"
+            android:layout_height="48dp"
             android:layout_marginStart="52dp"
             android:layout_marginTop="464dp"
             android:text="Return"
