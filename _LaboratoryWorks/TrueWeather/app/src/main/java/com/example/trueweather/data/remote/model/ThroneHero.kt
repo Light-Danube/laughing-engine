@@ -48,4 +48,11 @@ data class ThroneHero(
             return arrayOfNulls(size)
         }
     }
+
+    val fullImgURL: String?
+        get() = if (!image.isNullOrBlank()) {
+            "https://thronesapi.com/assets/images/$image"
+        } else {
+            null
+        }
 }

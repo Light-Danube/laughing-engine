@@ -31,7 +31,16 @@ class JSONFragment : Fragment() {
 
         // Assuming we have a TextView with ID "jsonTextView" in layout
         val jsonTextView = view.findViewById<TextView>(R.id.jsonDataText)
-        jsonTextView.text = character?.toString() ?: "Character not found"
+
+        // Build the complete URL for the image path
+        val imageUrl = character?.imgURL
+        val completeImageUrl = if (imageUrl != null) {
+            "https://thronesapi.com/assets/images/$imageUrl"
+        } else {
+            "Image URL not available"
+        }
+
+        jsonTextView.text = character?.toString() + completeImageUrl ?: "Character not found"
 
         val returnButton = view.findViewById<Button>(R.id.returnJSONBtn)
         returnButton.setOnClickListener {
