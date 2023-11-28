@@ -65,9 +65,10 @@
         <TextView
             android:id="@+id/idField"
             android:layout_width="232dp"
-            android:layout_height="20dp"
+            android:layout_height="48dp"
             android:layout_marginStart="96dp"
-            android:layout_marginTop="233dp"
+            android:layout_marginTop="220dp"
+            android:inputType="number"
             android:text="Write down ID"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
