@@ -3,6 +3,7 @@ package com.example.trueweather.presentation
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.NavHostFragment
 import com.example.trueweather.R
 
 class MainActivity : AppCompatActivity() {
@@ -10,10 +11,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Initialize Navigation
-        val navController = Navigation.findNavController(this, R.id.nav_host_fragment)
+        // Find nav host fragment
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
 
-        // Set default destination
-        navController.navigate(R.id.fragment_hero)
+        // Get nav controller
+        val navController = navHostFragment.navController
     }
 }
