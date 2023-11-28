@@ -1,11 +1,14 @@
 package com.example.trueweather.presentation
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
 import androidx.lifecycle.ViewModelProvider
 import com.example.trueweather.R
 import com.example.trueweather.data.ThroneRepository
@@ -23,9 +26,36 @@ class MainFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_prime, container, false)
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val repo = ThroneRepository()
+        viewModel = ViewModelProvider(this).get(MainFragmentViewModel::class.java)
+
+        val loadDataButton = view.findViewById<Button>(R.id.dataLoadBtn)
+        val totalTextView = view.findViewById<TextView>(R.id.totalIDField)
+        val idInput = view.findViewById<EditText>(R.id.idField)
+        val formButton = view.findViewById<Button>(R.id.formViewBtn)
+        val jsonButton = view.findViewById<Button>(R.id.jsonViewBtn)
+
+        loadDataButton.setOnClickListener {
+            viewModel.loadCharacters()
+        }
+
+        viewModel.totalCharacters.observe(viewLifecycleOwner) { count ->
+            totalTextView.text = "Currently loaded $count IDs"
+        }
+
+        /*formButton.setOnClickListener {
+            val id = idInput.text.toString().toInt()
+            viewModel.getCharacter(id)?.observe(viewLifecycleOwner) { hero ->
+                // Display hero data in UI
+            }
+        }*/
+
+        jsonButton.setOnClickListener {
+            // Display JSON response for character
+        }
+
     }
 }

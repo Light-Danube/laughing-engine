@@ -1,21 +1,27 @@
 package com.example.trueweather.presentation
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.example.trueweather.data.ThroneRepository
 import com.example.trueweather.data.remote.model.ThroneHero
-import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.async
+import kotlinx.coroutines.launch
 
 class MainFragmentViewModel(private val repository: ThroneRepository): ViewModel() {
-    // Live data for loaded characters
-    val characters = MutableLiveData<List<ThroneHero>>()
-
-    // Total number of characters
-    var totalCount = 0
+    val totalCharacters = MutableLiveData<Int>()
 
     fun loadCharacters() {
-        // Get characters from repository
-        characters.value = repository.getCharacters()
-        totalCount = characters.value!!.size // Update total count
+        viewModelScope.launch {
+            val characters = repository.getCharacters()
+            //totalCharacters.value = characters?.size ?: 0
+        }
+    }
+
+    suspend fun getCharacter(id: Int): LiveData<ThroneHero>? {
+        return viewModelScope.async {
+            repository.getCharacter(id)
+        }.await()
     }
 }
